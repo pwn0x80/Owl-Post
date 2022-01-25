@@ -1,0 +1,241 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  // This defines what 1rem is
+  font-size: 1vh;
+}
+
+body {
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 19px;
+
+  cursor: url(/public/icons/wand.png), auto;
+}
+.nav--bar {
+  display: flex;
+  flex-flow: row wrap;
+  /* This aligns items to the end line on main-axis */
+  justify-content: center;
+  text-decoration: none;
+}
+.cli__mode,
+.cli__mode:hover,
+.cli__mode:focus,
+.cli__mode:active {
+  text-decoration: none;
+  color: inherit;
+}
+.cli__mode {
+  font-family: "Norse";
+  color: brown;
+  font-size: 2rem;
+}
+
+.cli__mode:hover .cli__mode {
+  color: #00a0c6;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.header--page {
+  .header--page--txt--cli {
+    font-size: 2.5rem;
+    width: 30%;
+    min-height: 2%;
+  }
+  .harry__img {
+    position: relative;
+    float: left;
+    max-width: 33rem;
+    z-index: 2;
+    filter: grayscale(95%);
+    transition: all 3s;
+  }
+  .harry__img:hover {
+    filter: none;
+    z-index: 1;
+  }
+
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(https://img.freepik.com/free-photo/cardboard-sheet-paper-abstract-texture-background_7182-2105.jpg?size=626&ext=jpg);
+  background-size: auto;
+
+  background-position: top;
+
+  height: 95vh;
+
+  position: relative;
+  opacity: 0.8;
+  &--txt {
+    font-size: 3vw;
+    font-family: "Harry Potter", sans-serif;
+    //
+
+    position: absolute;
+    top: 15%;
+    left: 30%;
+    //transform: translate(-50%,-50%);
+    &--subtxt {
+      position: absolute;
+      font-size: 2rem;
+      transform: translate(-3%);
+      opacity: 1;
+      .fade {
+        opacity: 0;
+      }
+    }
+    &--subtxt:hover > .fade {
+      //animation-name: fade;
+      //    animation-duration: 3s;
+      animation: fade 0.8s steps(10) forwards;
+    }
+    &--cli {
+    }
+  }
+}
+
+.upload__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 8rem;
+  padding-bottom: 5vw;
+
+  .link__generator {
+    align-items: center;
+  }
+}
+
+.upload__box__drop {
+  &__title {
+    font-weight: lighter;
+    margin-bottom: 0.4rem;
+
+    letter-spacing: 8px;
+  }
+  //width: 42vw;
+
+  font-size: 2rem;
+  //height: 25vh;
+
+  border: dashed 7px #41403e;
+  box-shadow: 20px 38px 34px -26px hsla(0, 0%, 0%, 0.2);
+  border-radius: 255px 15px 255px 15px/15px 225px 15px 255px;
+
+  .icon__gif {
+    opacity: 0;
+    width: 21rem;
+  }
+  .icon__jpg {
+    font-weight: normal;
+    position: absolute;
+    width: 21rem;
+  }
+  .upload__box__drop__icon:hover > .ss {
+    background-blend-mode: lighten;
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.upload-animation {
+  transform: rotate(10deg) translateX(20px);
+  animation-name: harry-move;
+  position: relative;
+  animation-duration: 5s;
+}
+
+@keyframes harry-move {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  10% {
+    transform: rotate(2deg) translateY(22px);
+    left: 200px;
+    top: 50px;
+  }
+  15% {
+    left: 250px;
+    top: -30px;
+  }
+  20% {
+    left: 300px;
+    top: -20px;
+  }
+  25% {
+    left: 450px;
+    top: 55px;
+  }
+  30% {
+    left: 500px;
+    top: -30px;
+  }
+  35% {
+    left: 550px;
+    top: -20px;
+  }
+  45% {
+    left: 600px;
+    top: 55px;
+  }
+  55% {
+    left: 650px;
+    top: -20px;
+  }
+  66% {
+    left: 700px;
+    top: 55px;
+  }
+  77% {
+    left: 800px;
+    top: -30px;
+  }
+  88% {
+    left: 850px;
+    top: -20px;
+  }
+  100% {
+    left: 900px;
+    top: 55px;
+  }
+}
+
+.input__file {
+  display: none;
+}
+
+.browsebtn {
+  color: brown;
+  cursor: pointer;
+}
+.your-Mail {
+  a,
+  a:hover,
+  a:focus,
+  a:active {
+    text-decoration: none;
+    color: inherit;
+  }
+}
