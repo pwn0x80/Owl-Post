@@ -243,6 +243,13 @@ body {
   }
 }
 
+#header--page__cli__box{
+
+  max-width: 250vw;
+  width: 200vh;
+  margin-right: auto;
+  font-size: 3em;
+}
 @media screen and (max-width: 600px){
 .header--page .harry__img{
   max-width: 18rem;
