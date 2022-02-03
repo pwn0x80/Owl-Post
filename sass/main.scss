@@ -87,8 +87,11 @@ body {
     //
 
     position: absolute;
-    top: 15%;
-    left: 30%;
+    left:50%;
+ top:50%;
+ margin-left:-35vh;
+ margin-top:-25vh;
+   // left: 30%;
     //transform: translate(-50%,-50%);
     &--subtxt {
       position: absolute;
@@ -239,3 +242,44 @@ body {
     color: inherit;
   }
 }
+
+@media screen and (max-width: 600px){
+.header--page .harry__img{
+  max-width: 18rem;
+}
+.header--page--txt{
+  font-size: 3em;
+  //line-height: 77px;
+  position: absolute;
+left: unset;
+top: unset;
+margin: 4vw;
+margin-top: 15vh;
+
+}
+.header--page--txt--subtxt .fade {
+  opacity: unset;
+}
+
+}
+@media screen and  (min-width: 600px) and (max-width: 900px) {
+  .header--page--txt{
+    font-size: 3em;
+  //line-height: 77px;
+  position: absolute;
+left: unset;
+top: unset;
+margin: 11vh;
+margin-top: 15vh;
+
+
+  }
+  .header--page .harry__img{
+  max-width: 18rem;
+}
+.header--page--txt--subtxt .fade {
+  opacity: unset;
+}
+
+}
+
