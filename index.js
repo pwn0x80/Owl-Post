@@ -61,7 +61,10 @@ var config = {
 };
 //support one file only
 async function uFile() {
-  clink.remove();
+  if (clink != null) {
+
+    clink.remove();
+  }
   const file = fileInput.files;
   const formData = new FormData();
   formData.append("u", file[0]);
