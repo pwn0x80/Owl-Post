@@ -1,6 +1,7 @@
 *,
 *::after,
 *::before {
+  overflow: hidden;
   margin: 0;
   padding: 0;
   box-sizing: inherit;
@@ -11,7 +12,6 @@ html {
 }
 
 body {
-  overflow: hidden;
   box-sizing: border-box;
   padding: 19px;
   cursor: url(/Owl-Post/public/icons/wand.png), auto;
