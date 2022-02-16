@@ -42,12 +42,22 @@ var config = {
     "Content-Type": "multipart/form-data",
   },
 
-  onUploadProgress: function (progressEvent) {
+  onUploadProgress: function(progressEvent) {
     var percentCompleted = Math.round(
       (progressEvent.loaded * 100) / progressEvent.total
     );
     //Todo
     console.log(percentCompleted);
+
+    const loading = document.createElement("p");
+    loading.className = "wait";
+
+    while (percentCompleted != 100) {
+      loading.innerText = percentCompleted;
+      linkGenerator.appendChild(loading);
+    }
+    const delLoading = document.querySelector("wait");
+    delLoading.remove();
   },
 };
 //support one file only
@@ -58,10 +68,10 @@ async function uFile() {
   // axios support upoload progress
   axios
     .post(`${host}api/mail`, formData, config)
-    .then(function (res) {
+    .then(function(res) {
       displayLink(res["data"]["file"]);
     })
-    .catch(function (erro) {
+    .catch(function(erro) {
       console.error(`something went wrong please check here - ${erro}`);
     });
 }
