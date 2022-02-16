@@ -36,6 +36,8 @@ function dataResponse(response) {
 uploadBtn.addEventListener("click", () => {
   fileInput.click();
 });
+const loading = document.createElement("p");
+loading.className = "wait";
 
 var config = {
   Headers: {
@@ -49,8 +51,6 @@ var config = {
     //Todo
     console.log(percentCompleted);
 
-    const loading = document.createElement("p");
-    loading.className = "wait";
 
     loading.innerText = percentCompleted;
     linkGenerator.appendChild(loading);
