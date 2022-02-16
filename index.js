@@ -52,12 +52,10 @@ var config = {
     const loading = document.createElement("p");
     loading.className = "wait";
 
-    while (percentCompleted != 100) {
-      loading.innerText = percentCompleted;
-      linkGenerator.appendChild(loading);
-    }
-    const delLoading = document.querySelector("wait");
-    delLoading.remove();
+    loading.innerText = percentCompleted;
+    linkGenerator.appendChild(loading);
+    // const delLoading = document.querySelector("wait");
+    // delLoading.remove();
   },
 };
 //support one file only
