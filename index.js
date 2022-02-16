@@ -8,7 +8,6 @@ const host = "https://owl-mail.herokuapp.com/";
 uploadSpace.addEventListener("dragleave", (e) => {
   harryImg.classList.remove("upload-animation");
 });
-
 uploadSpace.addEventListener("drop", (e) => {
   e.preventDefault();
   uploadSpace.classList.remove("upload-animation");
@@ -36,6 +35,9 @@ function dataResponse(response) {
 uploadBtn.addEventListener("click", () => {
   fileInput.click();
 });
+
+
+// loading bar
 const loading = document.createElement("p");
 loading.className = "wait";
 
@@ -60,10 +62,7 @@ var config = {
 };
 //support one file only
 async function uFile() {
-  if (clinks != null) {
 
-    clinks.remove();
-  }
   const file = fileInput.files;
   const formData = new FormData();
   formData.append("u", file[0]);
@@ -78,15 +77,13 @@ async function uFile() {
     });
 }
 // link
+var linkAncor = document.createElement("a");
+linkAncor.textContent = "Click Here";
 const displayLink = (file) => {
-  console.log();
-  var linkAncor = document.createElement("a");
-  linkAncor.textContent = "Click Here";
   linkGenerator.appendChild(linkAncor);
 
   linkAncor.className = "your-Mail";
   linkAncor.href = file;
   linkGenerator.appendChild(linkAncor);
 
-  const clinks = document.querySelector(".your-Mail");
 };
