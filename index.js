@@ -3,7 +3,7 @@ const linkGenerator = document.querySelector(".upload__box__drop__title");
 const harryImg = document.querySelector(".harry__img");
 const uploadBtn = document.querySelector(".browsebtn");
 const fileInput = document.querySelector(".input__file");
-const clink = document.querySelector(".your-Mail");
+const clinks = document.querySelector(".your-Mail");
 const host = "https://owl-mail.herokuapp.com/";
 
 uploadSpace.addEventListener("dragleave", (e) => {
@@ -61,9 +61,9 @@ var config = {
 };
 //support one file only
 async function uFile() {
-  if (clink != null) {
+  if (clinks != null) {
 
-    clink.remove();
+    clinks.remove();
   }
   const file = fileInput.files;
   const formData = new FormData();
@@ -88,4 +88,6 @@ const displayLink = (file) => {
   linkAncor.className = "your-Mail";
   linkAncor.href = file;
   linkGenerator.appendChild(linkAncor);
+
+  const clinks = document.querySelector(".your-Mail");
 };
