@@ -245,6 +245,18 @@ body {
     opacity: unset;
   }
 }
+.wait {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.your-Mail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media screen and (min-width: 600px) and (max-width: 900px) {
   .header--page--txt {
     font-size: 3em;
