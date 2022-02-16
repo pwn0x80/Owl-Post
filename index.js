@@ -69,7 +69,7 @@ async function uFile() {
 const displayLink = (file) => {
   console.log();
   var linkAncor = document.createElement("a");
-  linkAncor.textContent = file;
+  linkAncor.textContent = "Click Here";
   linkGenerator.appendChild(linkAncor);
 
   linkAncor.className = "your-Mail";
